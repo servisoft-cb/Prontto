@@ -1,0 +1,27 @@
+unit uDmBairro;
+
+interface
+
+uses
+  SysUtils, Classes, FMTBcd, DB, DBClient, Provider, SqlExpr;
+
+type
+  TdmBairro = class(TDataModule)
+    sdsBairro: TSQLDataSet;
+    dspBairro: TDataSetProvider;
+    cdsBairro: TClientDataSet;
+    dsBairro: TDataSource;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  dmBairro: TdmBairro;
+
+implementation
+
+{$R *.dfm}
+
+end.

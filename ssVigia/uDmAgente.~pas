@@ -1,0 +1,23 @@
+unit uDmAgente;
+
+interface
+
+uses
+  SysUtils, Classes;
+
+type
+  TdmAgente = class(TDataModule)
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  dmAgente: TdmAgente;
+
+implementation
+
+{$R *.dfm}
+
+end.

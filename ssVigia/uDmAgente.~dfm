@@ -1,0 +1,7 @@
+object dmAgente: TdmAgente
+  OldCreateOrder = False
+  Left = 420
+  Top = 113
+  Height = 307
+  Width = 392
+end

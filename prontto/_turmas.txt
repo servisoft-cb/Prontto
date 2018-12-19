@@ -1,0 +1,11 @@
+id;turma;vagas;inicio;termino;cidade
+3;SGEVIA01/14;50;;;Alfredo Chaves
+4;SGEPOA01/14;50;2014-04-07;2014-04-11;Alto Rio Novo
+5;SGECA01/14;50;2014-04-22;2014-04-26;Água Doce do Norte
+6;SGE05/14;50;2014-04-14;2014-04-18;Afonso Cláudio
+7;SGE03/14;50;;;Afonso Cláudio
+8;SGE04/14;50;2014-04-07;2014-04-18;Afonso Cláudio
+10;SGE06/14;50;2014-04-22;2014-04-26;Afonso Cláudio
+11;SGE07/14;50;2014-04-22;2014-05-03;Afonso Cláudio
+12;SGEPOA02/14;50;2014-04-14;2014-04-18;Alto Rio Novo
+13;SGE08/14;50;2014-04-28;2014-05-03;Afonso Cláudio

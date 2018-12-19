@@ -1,0 +1,33 @@
+unit uDmReclamacao;
+
+interface
+
+uses
+  SysUtils, Classes, FMTBcd, DB, DBClient, Provider, SqlExpr;
+
+type
+  TdmReclamacao = class(TDataModule)
+    sdsReclamacao: TSQLDataSet;
+    dspReclamacao: TDataSetProvider;
+    cdsReclamacao: TClientDataSet;
+    dsReclamacao: TDataSource;
+    procedure DataModuleCreate(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  dmReclamacao: TdmReclamacao;
+
+implementation
+
+{$R *.dfm}
+
+procedure TdmReclamacao.DataModuleCreate(Sender: TObject);
+begin
+  cdsReclamacao.Open;
+end;
+
+end.

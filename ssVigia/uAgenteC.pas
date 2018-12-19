@@ -1,0 +1,62 @@
+unit uAgenteC;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms, Dialogs, Grids, DBGrids, SMDBGrid, ExtCtrls, TDI,
+  uDmAgente, StdCtrls, Buttons;
+
+type
+  TfAgenteC = class(TForm)
+    Panel1: TPanel;
+    SMDBGrid1: TSMDBGrid;
+    btInserir: TBitBtn;
+    BitBtn1: TBitBtn;
+    BitBtn2: TBitBtn;
+    Panel2: TPanel;
+    BitBtn3: TBitBtn;
+    Edit1: TEdit;
+    Label1: TLabel;
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure FormShow(Sender: TObject);
+    procedure btInserirClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+  private
+    { Private declarations }
+    FTDI: TTDI;
+  public
+    { Public declarations }
+    fDmAgente: TDmAgente;
+  end;
+
+var
+  fAgenteC: TfAgenteC;
+
+implementation
+
+uses rsDBUtils, uAgente, uMenu;
+
+{$R *.dfm}
+
+procedure TfAgenteC.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  Action := caFree;
+end;
+
+procedure TfAgenteC.FormShow(Sender: TObject);
+begin
+  fDMAgente := TDMAgente.Create(Self);
+  oDBUtils.SetDataSourceProperties(Self,fDmAgente);
+end;
+
+procedure TfAgenteC.btInserirClick(Sender: TObject);
+begin
+  FTDI.MostrarFormulario(TfAgente,False);
+end;
+
+procedure TfAgenteC.FormCreate(Sender: TObject);
+begin
+  FTDI := fMenu.FTDI;
+end;
+
+end. 
